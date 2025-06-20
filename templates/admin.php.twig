@@ -1,0 +1,32 @@
+<h2>LDAP via Cloudflare Tunnel 管理画面</h2>
+<form id="settingsForm">
+  <label>Cloudflared 実行パス:</label><br>
+  <input type="text" id="cloudflaredPath" name="cloudflaredPath" value="{{ cloudflaredPath }}" size="80"><br><br>
+  <label>トンネル名:</label><br>
+  <input type="text" id="tunnelName" name="tunnelName" value="{{ tunnelName }}" size="40"><br><br>
+  <label>Configファイルパス:</label><br>
+  <input type="text" id="configPath" name="configPath" value="{{ configPath }}" size="80"><br><br>
+  <label>ログファイルパス:</label><br>
+  <input type="text" id="logFile" name="logFile" value="{{ logFile }}" size="80"><br><br>
+  <button type="submit">設定を保存</button>
+</form>
+<hr>
+<h3>Cloudflared 設定ファイル</h3>
+<form id="uploadConfigForm" enctype="multipart/form-data">
+  <label>config.yml ファイルを選択してアップロード:</label><br>
+  <input type="file" name="configFile" accept=".yml,.yaml"><br>
+  <button type="submit">アップロード</button>
+</form>
+<br>
+<form id="editConfigForm">
+  <label>または、下記から直接編集:</label><br>
+  <textarea name="configContent" id="configContent" rows="15" cols="100">{{ configContent|e }}</textarea><br>
+  <button type="submit">保存</button>
+</form>
+<hr>
+<h3>トンネル操作</h3>
+<button id="startBtn">トンネル起動</button>
+<button id="stopBtn">トンネル停止</button>
+<p id="statusText">ステータス: 不明</p>
+<script src="{{ url('ldapvct', 'js/admin.js') }}"></script>
+<link rel="stylesheet" href="{{ url('ldapvct', 'css/admin.css') }}">

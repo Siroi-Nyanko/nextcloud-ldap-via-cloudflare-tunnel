@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<info>
+  <id>ldapvct</id>
+  <name>LDAP via Cloudflare Tunnel</name>
+  <description>LDAP接続をCloudflare Tunnel経由で実現するNextcloudアプリ</description>
+  <version>1.0.0</version>
+  <namespace>LDAPViaCloudflareTunnel</namespace>
+  <author>あなたの名前</author>
+  <license>MIT</license>
+  <default_enable>true</default_enable>
+</info>

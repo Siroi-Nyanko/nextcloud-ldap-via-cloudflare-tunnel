@@ -1,0 +1,6 @@
+{
+  "name": "yourvendor/ldap-via-cloudflare-tunnel",
+  "description": "Nextcloud app for LDAP via Cloudflare Tunnel",
+  "type": "nextcloud-app",
+  "license": "MIT"
+}
